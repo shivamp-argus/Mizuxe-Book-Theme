@@ -2,6 +2,14 @@ body {
   margin-top: 105px;
 }
 
+.primary-color {
+  color: #3292a6;
+}
+
+.primary-background {
+  background-color: #3292a6;
+}
+
 .navbar {
   box-shadow: 2px 2px 5px #3292a6;
   opacity: 0.9;
@@ -34,12 +42,25 @@ body {
   border-color: #3292a6 !important;
 }
 
-.primary-color {
-  color: #3292a6;
+#info-header {
+  width: 50%;
+  margin: auto;
+}
+#info-header p {
+  border-bottom: 1px #ddd solid;
 }
 
-.primary-background {
-  background-color: #3292a6;
+#accordian .accordion-button {
+  display: block;
+  text-align: center;
+}
+#accordian .accordion-button:focus {
+  border-color: #fff;
+  box-shadow: 2px 2px 4px #ddd;
+}
+#accordian .accordion-button:not(.collapsed) {
+  background-color: #fff;
+  color: black;
 }
 
 @media (max-width: 768px) {

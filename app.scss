@@ -4,6 +4,12 @@ $primary-overlay: rgba(50,146,166,0.8);
 body{
     margin-top: 105px;
 }
+.primary-color{
+    color: $primary;
+}
+.primary-background{
+    background-color: $primary;
+}
 .navbar{
     box-shadow: 2px 2px 5px $primary;
     opacity: 0.9;
@@ -36,11 +42,26 @@ body{
         border-color: $primary !important;
     }
 }
-.primary-color{
-    color: $primary;
+#info-header{
+    width: 50%;
+    margin: auto;
+    p{
+        border-bottom: 1px #ddd solid;
+    }
 }
-.primary-background{
-    background-color: $primary;
+#accordian{
+    .accordion-button{
+        display: block;
+        text-align: center;
+    }
+    .accordion-button:focus{
+        border-color: #fff;
+        box-shadow: 2px 2px 4px #ddd;
+    }
+    .accordion-button:not(.collapsed) {
+        background-color: #fff;
+        color: black;
+    }
 }
 
 
