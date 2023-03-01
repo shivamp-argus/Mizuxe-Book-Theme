@@ -26,3 +26,31 @@ body{
         background: $primary-overlay;
     }
 }
+#newsletter{
+    button{
+        background-color: $primary;
+    }
+}
+#boxes{
+    .custom-border{
+        border-color: $primary !important;
+    }
+}
+.primary-color{
+    color: $primary;
+}
+.primary-background{
+    background-color: $primary;
+}
+
+
+// Media queries
+@media (max-width:768px){
+    #showcase{
+        min-height: 400px;
+        h1{
+            font-size: 4rem;
+        }
+    }
+    
+}

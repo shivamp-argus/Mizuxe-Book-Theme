@@ -24,4 +24,29 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(50, 146, 166, 0.8);
+}
+
+#newsletter button {
+  background-color: #3292a6;
+}
+
+#boxes .custom-border {
+  border-color: #3292a6 !important;
+}
+
+.primary-color {
+  color: #3292a6;
+}
+
+.primary-background {
+  background-color: #3292a6;
+}
+
+@media (max-width: 768px) {
+  #showcase {
+    min-height: 400px;
+  }
+  #showcase h1 {
+    font-size: 4rem;
+  }
 }/*# sourceMappingURL=app.css.map */
