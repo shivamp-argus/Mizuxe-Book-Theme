@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="app.css" />
     <title>Mizuxe</title>
   </head>
-  <body>
+  <body id="home" data-bs-spy="scroll" data-bs-target="#main-nav">
     <!-- Navbar -->
-    <div class="">
+    <div id="main-nav">
       <nav class="navbar navbar-expand-md bg-light fixed-top py-4">
         <div class="container">
           <a class="navbar-brand" href="#"
@@ -49,16 +49,18 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#home">Home</a>
+                <a class="nav-link" aria-current="page" href="#showcase"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#meettheauthors">Meet The Authors</a>
+                <a class="nav-link" href="#authors">Meet The Authors</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
+                <a class="nav-link" href="#contacts">Contact</a>
               </li>
             </ul>
           </div>
@@ -431,6 +433,77 @@
         </div>
       </div>
     </section>
+    <!-- Contacts -->
+    <section id="contacts" class="bg-light py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h3>Get In Touch</h3>
+            <p class="lead">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
+              eius atque! Repellendus reiciendis totam obcaecati?
+            </p>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon1"
+                ><i class="fa-solid fa-address-book"></i
+              ></span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Username"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text" id="basic-addon2"
+                ><i class="fa-solid fa-envelope"></i
+              ></span>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Recipient's username"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2"
+              />
+            </div>
+            <div class="input-group mb-3">
+              <span class="input-group-text"
+                ><i class="fa-solid fa-pen"></i
+              ></span>
+              <textarea
+                class="form-control"
+                aria-label="With textarea"
+                rows="8"
+                cols="20"
+              ></textarea>
+            </div>
+            <div class="input-group">
+              <button
+                type="submit"
+                class="btn btn-primary primary-background w-100 mb-3"
+              >
+                <i class="fas fa-enevelope-open-o"></i> Submit
+              </button>
+            </div>
+          </div>
+          <div class="col-lg-4 d-none d-lg-block align-self-center">
+            <img src="images/mlogo.png" alt="Mizuxe-Logo" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer id="main-footer" class="primary-background">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center py-4">
+            <h3>Mizuxe</h3>
+            <p>Copyright &copy; <span id="year"></span></p>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- Bootstrap Script -->
 
     <script
@@ -443,5 +516,10 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
+    <script>
+      $("#year").text(new Date().getFullYear());
+
+      $("body").scrollspy({ target: "#main-nav" });
+    </script>
   </body>
 </html>
